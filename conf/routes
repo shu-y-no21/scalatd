@@ -14,3 +14,7 @@ GET     /todo/hello                 controllers.ToDoController.hello()
 
 # ToDo page <3
 GET     /todo                       controllers.ToDoController.list()
+
+
+GET     /todo/new                   controllers.ToDoController.todoNew()
+POST    /todo                       controllers.ToDoController.todoAdd()

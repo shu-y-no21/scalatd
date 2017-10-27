@@ -1,0 +1,19 @@
+@(todoForm: Form[String])(implicit request: MessagesRequestHeader)
+<html>
+    <head>
+        <title>Todo</title>
+    </head>
+    <body>
+
+        <h1>Todo Registration</h1>
+        
+        @helper.form(action = routes.ToDoController.todoAdd()) {
+            @helper.CSRF.formField
+            <fieldset>
+                @helper.inputText(todoForm("name"), '_label -> "Name"')
+            </fieldset>
+            <input type="submit" value="register">
+        }
+
+    </body>
+</html>
