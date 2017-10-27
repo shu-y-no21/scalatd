@@ -35,8 +35,10 @@ class ToDoController @Inject()(todoService: ToDoService, mcc: MessagesController
 
   def todoAdd() = Action {  implicit request: MessagesRequest[AnyContent] =>
     val name: String = todoForm.bindFromRequest().get
-    println(name)
-    Ok("Save")
+    //println(name)
+    //Ok("Save")
+    todoService.insert(ToDo(name))
+    Redirect(routes.ToDoController.list())
   }
 
 }
