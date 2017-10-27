@@ -10,7 +10,7 @@
         @helper.form(action = routes.ToDoController.todoAdd()) {
             @helper.CSRF.formField
             <fieldset>
-                @helper.inputText(todoForm("name"), '_label -> "Name"')
+                @helper.inputText(todoForm("name"), '_label -> "Name")
             </fieldset>
             <input type="submit" value="register">
         }
