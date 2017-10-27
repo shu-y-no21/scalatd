@@ -13,7 +13,7 @@ class ToDoController @Inject()(mcc: MessagesControllerComponents) extends Messag
 
   def list() = Action {
     implicit request: MessagesRequest[AnyContent] => 
-    val message: String = "display a list here"
+    val message: String = "display a list here :)"
     Ok(views.html.list(message))
   }
 

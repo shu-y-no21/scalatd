@@ -13,4 +13,4 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 GET     /todo/hello                 controllers.ToDoController.hello()
 
 # ToDo page <3
-GET     /todo                       controller.ToDoController.list()
+GET     /todo                       controllers.ToDoController.list()
