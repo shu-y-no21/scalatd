@@ -15,9 +15,13 @@ GET     /todo/hello                 controllers.ToDoController.hello()
 # ToDo page <3
 GET     /todo                       controllers.ToDoController.list()
 
-
+# ToDo Register
 GET     /todo/new                   controllers.ToDoController.todoNew()
 POST    /todo                       controllers.ToDoController.todoAdd()
 
+# ToDo Update
 GET     /todo/edit/:todoId                  controllers.ToDoController.todoEdit(todoId:Long)
 POST   /todo/:todoId                       controllers.ToDoController.todoUpdate(todoId:Long)
+
+# ToDo Delete
+POST   /todo/:todoId/delete                controllers.ToDoController.todoDelete(todoId:Long)

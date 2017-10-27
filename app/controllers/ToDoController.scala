@@ -53,4 +53,9 @@ class ToDoController @Inject()(todoService: ToDoService, mcc: MessagesController
     Redirect(routes.ToDoController.list())
   }
 
+  def todoDelete(todoId: Long) = Action { implicit request: MessagesRequest[AnyContent] =>
+    todoService.delete(todoId)
+    Redirect(routes.ToDoController.list())
+  }
+
 }
