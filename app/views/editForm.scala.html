@@ -1,0 +1,25 @@
+@(id: Long, todoForm: Form[String])(implicit request: MessagesRequestHeader)
+
+<html>
+<head>
+    <title>ToDo</title>
+</head>
+<body>
+
+<h1>Todo Update</h1>
+
+@helper.form(action = routes.ToDoController.todoUpdate(id)) {
+@helper.CSRF.formField
+
+<fieldset>
+
+    @helper.inputText(todoForm("name"), '_label -> "Name")
+
+</fieldset>
+
+<input type="submit" value="update">
+
+}
+
+</body>
+</html>

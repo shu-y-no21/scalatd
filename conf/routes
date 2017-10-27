@@ -18,3 +18,6 @@ GET     /todo                       controllers.ToDoController.list()
 
 GET     /todo/new                   controllers.ToDoController.todoNew()
 POST    /todo                       controllers.ToDoController.todoAdd()
+
+GET     /todo/edit/:todoId                  controllers.ToDoController.todoEdit(todoId:Long)
+POST   /todo/:todoId                       controllers.ToDoController.todoUpdate(todoId:Long)

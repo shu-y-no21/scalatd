@@ -18,7 +18,7 @@
                 @items.map { todo =>
                     <tr>
                         <td>
-                            @todo.name
+                            <a href="@controllers.routes.ToDoController.todoEdit(todo.id.get)">@todo.name</a>
                         </td>
                     </tr>
                 }
@@ -26,7 +26,7 @@
 
                 
             </table>
-            <a href="/todo/new">Register Page</a>
+            <a href="@controllers.routes.ToDoController.todoNew()">Register Page</a>
         </section>
 
     </body>
