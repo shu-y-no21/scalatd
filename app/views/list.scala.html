@@ -1,12 +1,32 @@
-@(message: String)
+@import services._
+@(items: Seq[ToDo])
+
 <html>
     <head>
-        <title>Todo</title>
+        <title>ToDo</title>
     </head>
     <body>
 
         <section>
-        @message
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @items.map { todo =>
+                    <tr>
+                        <td>
+                            @todo.name
+                        </td>
+                    </tr>
+                }
+                </tbody>
+
+                
+            </table>
+            <a href="/todo/new">Register Page</a>
         </section>
 
     </body>
